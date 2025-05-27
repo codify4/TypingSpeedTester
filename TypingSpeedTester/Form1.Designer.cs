@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             lblTestText = new Label();
             txtInput = new TextBox();
             btnStart = new Button();
@@ -42,19 +43,22 @@
             lblTestText.AutoSize = true;
             lblTestText.Font = new Font("Segoe UI", 16F, FontStyle.Bold);
             lblTestText.ForeColor = Color.White;
-            // Remove hardcoded Location, will be set in code-behind
+            lblTestText.Location = new Point(0, 0);
+            lblTestText.Name = "lblTestText";
+            lblTestText.Size = new Size(0, 30);
+            lblTestText.TabIndex = 5;
             // 
             // txtInput
             // 
             txtInput.BackColor = Color.FromArgb(45, 45, 45);
             txtInput.BorderStyle = BorderStyle.FixedSingle;
             txtInput.ForeColor = Color.White;
+            txtInput.Location = new Point(0, 0);
             txtInput.Multiline = true;
             txtInput.Name = "txtInput";
             txtInput.Size = new Size(399, 93);
             txtInput.TabIndex = 1;
             txtInput.TextChanged += txtInput_TextChanged;
-            // Remove hardcoded Location, will be set in code-behind
             // 
             // btnStart
             // 
@@ -63,12 +67,12 @@
             btnStart.FlatAppearance.BorderSize = 0;
             btnStart.FlatStyle = FlatStyle.Flat;
             btnStart.ForeColor = Color.White;
+            btnStart.Location = new Point(0, 0);
             btnStart.Name = "btnStart";
             btnStart.Size = new Size(75, 35);
             btnStart.TabIndex = 2;
             btnStart.Text = "Start";
             btnStart.UseVisualStyleBackColor = false;
-            // Remove hardcoded Location, will be set in code-behind
             // 
             // btnReset
             // 
@@ -77,24 +81,24 @@
             btnReset.FlatAppearance.BorderSize = 0;
             btnReset.FlatStyle = FlatStyle.Flat;
             btnReset.ForeColor = Color.White;
+            btnReset.Location = new Point(0, 0);
             btnReset.Name = "btnReset";
             btnReset.Size = new Size(75, 35);
             btnReset.TabIndex = 3;
             btnReset.Text = "Reset";
             btnReset.UseVisualStyleBackColor = false;
             btnReset.Click += btnReset_Click;
-            // Remove hardcoded Location, will be set in code-behind
             // 
             // lblResult
             // 
             lblResult.AutoSize = true;
             lblResult.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             lblResult.ForeColor = Color.White;
+            lblResult.Location = new Point(0, 0);
             lblResult.Name = "lblResult";
             lblResult.Size = new Size(57, 21);
             lblResult.TabIndex = 4;
             lblResult.Text = "Result";
-            // Remove hardcoded Location, will be set in code-behind
             // 
             // Form1
             // 
@@ -108,10 +112,10 @@
             Controls.Add(txtInput);
             Controls.Add(lblTestText);
             ForeColor = Color.White;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form1";
             Text = "TypeFast";
             Load += Form1_Load;
-            // Add Resize event handler
             Resize += Form1_Resize;
             ResumeLayout(false);
             PerformLayout();
